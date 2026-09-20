@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .container {
+            width: 530px;
+            margin: auto;
+            padding: 15px 45px 20px;
+            background-color: #ffffdf;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 23px;
+            margin: 0 0 3px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 10px;
+            margin: 0 0 25px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .form-row > label:first-child {
+            width: 105px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        input[type="time"] {
+            width: 190px;
+            height: 25px;
+            border: 1px solid #aaa;
+            padding: 3px;
+        }
+
+        select {
+            width: 260px;
+            height: 25px;
+        }
+
+        input[type="file"] {
+            width: 250px;
+            font-size: 11px;
+        }
+
+        textarea {
+            width: 265px;
+            height: 52px;
+            resize: vertical;
+            border: 1px solid #aaa;
+        }
+
+        .form-row span {
+            color: red;
+            font-size: 9px;
+            margin-left: 10px;
+            white-space: nowrap;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .options input {
+            margin-left: 4px;
+        }
+
+        .options label {
+            width: auto !important;
+            font-weight: normal !important;
+            margin-right: 5px;
+        }
+
+        .declaration {
+            margin-top: 10px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .declaration input {
+            margin-right: 5px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        button {
+            width: 75px;
+            height: 27px;
+            margin: 0 7px;
+            border: 1px solid #999;
+            background-color: #eeeeee;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #dddddd;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>My-Future College / School</h1>
+
+    <p class="subtitle">
+        Please Fill Below Detail In Student Registration Form
+    </p>
+
+    <form>
+
+        <!-- Student Name -->
+        <div class="form-row">
+            <label for="name">Student name :</label>
+
+            <input type="text"
+                   id="name"
+                   name="name"
+                   minlength="3"
+                   maxlength="10"
+                   required>
+
+            <span>Min 3 & Max 10 letter is allow</span>
+        </div>
+
+
+        <!-- Date of Birth -->
+        <div class="form-row">
+            <label for="dob">Date of birth :</label>
+
+            <input type="date"
+                   id="dob"
+                   name="dob"
+                   required>
+
+            <span>Valid Date is allow</span>
+        </div>
+
+
+        <!-- Mobile Number -->
+        <div class="form-row">
+            <label for="mobile">Mobile no. :</label>
+
+            <input type="tel"
+                   id="mobile"
+                   name="mobile"
+                   pattern="[0-9]{10}"
+                   maxlength="10"
+                   required>
+
+            <span>Only integer is allow</span>
+        </div>
+
+
+        <!-- Email -->
+        <div class="form-row">
+            <label for="email">Email id :</label>
+
+            <input type="email"
+                   id="email"
+                   name="email"
+                   required>
+
+            <span>Valid Email Id is allow</span>
+        </div>
+
+
+        <!-- Password -->
+        <div class="form-row">
+            <label for="password">Password :</label>
+
+            <input type="password"
+                   id="password"
+                   name="password"
+                   minlength="8"
+                   required>
+
+            <span>Min 8 digit is allow</span>
+        </div>
+
+
+        <!-- Gender -->
+        <div class="form-row">
+
+            <label>Gender :</label>
+
+            <div class="options">
+
+                <input type="radio"
+                       id="male"
+                       name="gender"
+                       value="Male"
+                       required>
+
+                <label for="male">Male</label>
+
+                <input type="radio"
+                       id="female"
+                       name="gender"
+                       value="Female">
+
+                <label for="female">Female</label>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hobbies -->
+        <div class="form-row">
+
+            <label>Hobbies :</label>
+
+            <div class="options">
+
+                <input type="checkbox"
+                       id="drawing"
+                       name="hobbies"
+                       value="Drawing">
+
+                <label for="drawing">Drawing</label>
+
+
+                <input type="checkbox"
+                       id="singing"
+                       name="hobbies"
+                       value="Singing">
+
+                <label for="singing">Singing</label>
+
+
+                <input type="checkbox"
+                       id="dancing"
+                       name="hobbies"
+                       value="Dancing">
+
+                <label for="dancing">Dancing</label>
+
+
+                <input type="checkbox"
+                       id="sketch"
+                       name="hobbies"
+                       value="Sketch">
+
+                <label for="sketch">Sketch</label>
+
+
+                <input type="checkbox"
+                       id="sports"
+                       name="hobbies"
+                       value="Sports">
+
+                <label for="sports">Sports</label>
+
+            </div>
+
+        </div>
+
+
+        <!-- Course -->
+        <div class="form-row">
+
+            <label for="course">Course :</label>
+
+            <select id="course"
+                    name="course"
+                    required>
+
+                <option value="">
+                    ---------- Select Admission Course's ----------
+                </option>
+
+                <option value="BCA">BCA</option>
+                <option value="BSc CS">B.Sc Computer Science</option>
+                <option value="BBA">BBA</option>
+                <option value="BCS">BCS</option>
+                <option value="BA">BA</option>
+                <option value="BCom">B.Com</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Student Photo -->
+        <div class="form-row">
+
+            <label for="photo">Student photo :</label>
+
+            <input type="file"
+                   id="photo"
+                   name="photo"
+                   accept="image/*"
+                   required>
+
+        </div>
+
+
+        <!-- Register Time -->
+        <div class="form-row">
+
+            <label for="time">Register Time :</label>
+
+            <input type="time"
+                   id="time"
+                   name="time"
+                   required>
+
+        </div>
+
+
+        <!-- Address -->
+        <div class="form-row">
+
+            <label for="address">Address :</label>
+
+            <textarea id="address"
+                      name="address"
+                      required></textarea>
+
+        </div>
+
+
+        <!-- Declaration -->
+        <div class="declaration">
+
+            <input type="checkbox"
+                   id="declaration"
+                   name="declaration"
+                   required>
+
+            <label for="declaration">
+                I hereby declare that above information provided is correct
+            </label>
+
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button type="submit">
+                Register
+            </button>
+
+            <button type="reset">
+                Reset
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
