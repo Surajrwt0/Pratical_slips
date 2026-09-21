@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .form {
+            width: 600px;
+            margin: 20px auto;
+            padding: 20px 40px;
+            background-color: #ffe4e1;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 7px;
+        }
+
+        input, select, textarea {
+            padding: 6px;
+            border: 1px solid #aaa;
+        }
+
+        .text {
+            width: 290px;
+        }
+
+        .name {
+            width: 130px;
+        }
+
+        .small {
+            width: 35px;
+        }
+
+        .year {
+            width: 60px;
+        }
+
+        textarea {
+            width: 270px;
+            height: 50px;
+        }
+
+        .register {
+            text-align: center;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form">
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <table>
+
+            <tr>
+                <td>Roll no. :</td>
+                <td>
+                    <input type="number" class="text" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Student name :</td>
+                <td>
+                    <input type="text" class="name"
+                           placeholder="First Name" required>
+                    -
+                    <input type="text" class="name"
+                           placeholder="Last Name" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Father's name :</td>
+                <td>
+                    <input type="text" class="text" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date of birth :</td>
+                <td>
+                    <input type="number" class="small"
+                           placeholder="Day" min="1" max="31" required>
+                    -
+                    <input type="number" class="small"
+                           placeholder="Month" min="1" max="12" required>
+                    -
+                    <input type="number" class="year"
+                           placeholder="Year" min="1900" max="2026" required>
+                    <i>(DD-MM-YYYY)</i>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mobile no. :</td>
+                <td>
+                    <input type="text" value="+91" class="small" readonly>
+                    -
+                    <input type="tel" class="text"
+                           pattern="[0-9]{10}"
+                           maxlength="10"
+                           required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Email id :</td>
+                <td>
+                    <input type="email" class="text" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password :</td>
+                <td>
+                    <input type="password" class="text"
+                           minlength="6" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender :</td>
+                <td>
+                    <input type="radio" name="gender" required> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+
+            <tr>
+                <td>Department :</td>
+                <td>
+                    <input type="checkbox"> CSE
+                    <input type="checkbox"> IT
+                    <input type="checkbox"> ECE
+                    <input type="checkbox"> Civil
+                    <input type="checkbox"> Mech
+                </td>
+            </tr>
+
+            <tr>
+                <td>Course :</td>
+                <td>
+                    <select class="text" required>
+                        <option value="">Select Current Course</option>
+                        <option>B.Sc Computer Science</option>
+                        <option>BCA</option>
+                        <option>B.Tech</option>
+                        <option>MCA</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Student photo :</td>
+                <td>
+                    <input type="file" accept="image/*" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>City :</td>
+                <td>
+                    <input type="text" class="text" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Address :</td>
+                <td>
+                    <textarea required></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="register">
+                    <button type="submit">Register</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+</div>
+
+</body>
+</html>
