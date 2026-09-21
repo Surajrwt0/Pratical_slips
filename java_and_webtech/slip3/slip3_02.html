@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Homepage</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Main Content */
+        main {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .content {
+            background-color: white;
+            padding: 25px;
+            flex: 2;
+            border-radius: 8px;
+        }
+
+        .sidebar {
+            background-color: white;
+            padding: 25px;
+            flex: 1;
+            border-radius: 8px;
+        }
+
+        .content h2,
+        .sidebar h2 {
+            color: #1e3a5f;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            line-height: 1.6;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+
+            main {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .content,
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>ABC College</h1>
+        <p>Excellence in Education</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Admissions</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Content -->
+    <main>
+
+        <section class="content">
+            <h2>Welcome to ABC College</h2>
+
+            <p>
+                ABC College is committed to providing quality education
+                and creating opportunities for students to develop their
+                knowledge, skills and personality.
+            </p>
+
+            <br>
+
+            <p>
+                Our college offers various undergraduate and postgraduate
+                courses with experienced faculty and modern facilities.
+            </p>
+        </section>
+
+        <aside class="sidebar">
+            <h2>Latest News</h2>
+
+            <ul>
+                <li>Admissions are now open</li>
+                <li>Annual Sports Day</li>
+                <li>College Fest 2026</li>
+                <li>Exam Timetable Released</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ABC College | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
