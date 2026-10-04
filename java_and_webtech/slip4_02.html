@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background: #eee;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.08);
+            opacity: 0.7;
+        }
+
+        @media (max-width: 700px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 450px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="https://picsum.photos/id/10/600/400" alt="Nature">
+        <img src="https://picsum.photos/id/20/600/400" alt="Nature">
+        <img src="https://picsum.photos/id/30/600/400" alt="Nature">
+        <img src="https://picsum.photos/id/40/600/400" alt="Nature">
+        <img src="https://picsum.photos/id/50/600/400" alt="Nature">
+        <img src="https://picsum.photos/id/60/600/400" alt="Nature">
+    </div>
+
+</body>
+</html>
